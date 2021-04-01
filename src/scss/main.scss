@@ -10,6 +10,21 @@ html {
 *::before {
   box-sizing: inherit;
 }
+@keyframes question-mark {
+  0% {
+    transform: scale(1) rotate(180deg);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.question-mark {
+  display: inline-block;
+  animation: question-mark 0.5s ease-in-out 1;
+}
 
 body {
   background: #e2d5c8;
@@ -44,6 +59,9 @@ h1 {
 .steve {
   margin: 0 auto;
   display: block;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 .about {
   background: #e2d5c8;
@@ -55,7 +73,7 @@ h1 {
   font-size: 18px;
   line-height: 24px;
   color: #1d0c0c;
- 
+
   &--header {
     background: #f1e6e0;
     padding: 5% 5% 12% 5%;
@@ -76,7 +94,11 @@ h1 {
   }
 }
 footer {
-  display: flex;
-  justify-content: center;
-  height: 48px;
+  text-align: center;
+  padding: 16px;
+}
+a {
+  text-decoration: none;
+  color: #e0a88a;
+  padding: 3px;
 }
